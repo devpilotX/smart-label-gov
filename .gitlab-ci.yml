@@ -1,0 +1,50 @@
+# SmartLabel Inspector CI
+#
+# test  - unit tests + byte-compile of every module (blocking)
+# lint  - ruff static checks (informational, never blocks a merge)
+
+stages:
+  - test
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+default:
+  image: python:3.12-slim
+  interruptible: true
+  before_script:
+    - python -m pip install --upgrade pip
+    - python -m pip install -r requirements-dev.txt
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+
+cache:
+  key:
+    files:
+      - requirements.txt
+      - requirements-dev.txt
+  paths:
+    - .cache/pip
+
+test:
+  stage: test
+  script:
+    - python -m compileall -q app.py smartlabel tests
+    - python -m pytest -q tests --junitxml=report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+
+lint:
+  stage: test
+  allow_failure: true
+  script:
+    - python -m ruff check .

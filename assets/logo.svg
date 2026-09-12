@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 112" role="img" aria-labelledby="title desc">
+  <title id="title">SmartLabel Inspector</title>
+  <desc id="desc">Blue label mark with a green verification badge beside the SmartLabel Inspector wordmark.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b7bff"/>
+      <stop offset="1" stop-color="#153f8a"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 8)">
+    <rect width="96" height="96" rx="22" fill="url(#bg)"/>
+    <rect x="1.5" y="1.5" width="93" height="45" rx="21" fill="url(#shine)"/>
+    <path d="M27 18h33a9 9 0 0 1 9 9v39a9 9 0 0 1-9 9H27a9 9 0 0 1-9-9V27a9 9 0 0 1 9-9Z" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-width="4.8"/>
+    <path d="M33 33h30M33 43.5h21" stroke="#ffffff" stroke-width="4.8" stroke-linecap="round"/>
+    <circle cx="63" cy="66" r="16.5" fill="#12b886" stroke="#ffffff" stroke-width="4.5"/>
+    <path d="m54.5 66 5.7 5.7 10.8-11.4" fill="none" stroke="#ffffff" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="124" y="62" fill="#17283d" font-family="Inter,'Segoe UI',Arial,Helvetica,sans-serif" font-size="50" font-weight="800" letter-spacing="-1">SmartLabel</text>
+  <text x="126" y="94" fill="#2167d5" font-family="Inter,'Segoe UI',Arial,Helvetica,sans-serif" font-size="21" font-weight="700" letter-spacing="5">INSPECTOR</text>
+</svg>

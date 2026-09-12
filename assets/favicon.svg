@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="SmartLabel Inspector">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b7bff"/>
+      <stop offset="1" stop-color="#153f8a"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <rect x="1" y="1" width="62" height="30" rx="14" fill="url(#shine)"/>
+  <path d="M18 12h22a6 6 0 0 1 6 6v26a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V18a6 6 0 0 1 6-6Z" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-width="3.2"/>
+  <path d="M22 22h20M22 29h14" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="42" cy="44" r="11" fill="#12b886" stroke="#ffffff" stroke-width="3"/>
+  <path d="m36.3 44 3.8 3.8 7.3-7.6" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
